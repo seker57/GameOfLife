@@ -2,14 +2,15 @@ import java.util.Scanner;
 
 public class Main {
 
-	static String width, length;
+	static String width = "0", length = "0";
 	private static PlayingField playingField;
 
 	static char[] field;
 	public static void main(String[] args) {
 		initializeGameField();
 		playingField.printFieldStatus();
-		doGameRoutine2();
+
+		//doGameRoutine2();
 	}
 	private static void setCharToAllFields(char c){
 		for (int i = 0; i < field.length; i++) {
@@ -22,13 +23,29 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("------Game of Life Rules------");
-		System.out.print("Wie viele Felder breit soll das Spiel sein: ");
-		width = scanner.nextLine();
-		System.out.print("Wie viele Felder lang soll das Spiel sein: ");
-		length = scanner.nextLine();
+
+		while(Integer.parseInt(width) < 9){
+			System.out.print("Wie viele Felder breit soll das Spiel sein: ");
+			width = scanner.nextLine();
+
+			if(Integer.parseInt(width) < 9){
+				System.out.println("Das Feld muss mindestens 9 Felder breit sein!");
+			}
+		}
+
+		while(Integer.parseInt(length) < 9){
+			System.out.print("Wie viele Felder lang soll das Spiel sein: ");
+			length = scanner.nextLine();
+
+			if(Integer.parseInt(length) < 9){
+				System.out.println("Das Feld muss mindestens 9 Felder lang sein!");
+			}
+		}
+
 		System.out.println();
 
 		playingField = new PlayingField(Integer.parseInt(width), Integer.parseInt(length));
+		playingField.initializeField();
 	}
 
 	public static void doGameRoutine1(){
