@@ -1,20 +1,17 @@
 package Tests;
 
 import GameUtilities.PlayingField;
+import junit.framework.TestCase;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-/**
- * Created by Timo on 24.10.2015.
- */
-public class PlayingFieldTest {
+public class PlayingFieldTest extends TestCase {
 
     @Test
-    public void testPlayingFieldSize(){
+    public void testeSizeOfPlayingField(){
 
-        PlayingField spielfeld = new PlayingField(9, 9);
-        assert(spielfeld.getLength() * spielfeld.getWidth() == 81);
+        PlayingField playingField = new PlayingField(9, 9);
+        assert((playingField.getWidth() * playingField.getLength()) == 81);
+
     }
 
 }
