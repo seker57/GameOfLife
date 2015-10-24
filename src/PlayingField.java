@@ -10,11 +10,19 @@ public class PlayingField {
         this.length = length;
         this.width = width;
 
-        fieldcells = new char[(length*width) - 1];
+        fieldcells = new char[(length*width)];
     }
 
     public void printFieldStatus(){
 
+        for (int i = 0; i < length; i++) {
+            for (int y = 0; y < width; y++) {
+                System.out.print("[" + fieldcells[i * y] + "]");
+            }
+            System.out.println();
+        }
+
+        System.out.println("***********");
     }
 
     public char[] getFieldCells(){

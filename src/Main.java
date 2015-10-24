@@ -8,7 +8,7 @@ public class Main {
 	static char[] field;
 	public static void main(String[] args) {
 		initializeGameField();
-		printField();
+		playingField.printFieldStatus();
 		doGameRoutine2();
 	}
 	private static void setCharToAllFields(char c){
@@ -30,12 +30,7 @@ public class Main {
 
 		playingField = new PlayingField(Integer.parseInt(width), Integer.parseInt(length));
 	}
-	private static void printField(){
-		System.out.println("["+field[0]+"] "+"["+field[1]+"] "+"["+field[2]+"]");
-		System.out.println("["+field[3]+"] "+"["+field[4]+"] "+"["+field[5]+"]");
-		System.out.println("["+field[6]+"] "+"["+field[7]+"] "+"["+field[8]+"]");
-		System.out.println("***********");
-	}
+
 	public static void doGameRoutine1(){
 		for (int position  = 0; position  < field.length; position ++) {
 			int amountOfNeighbours = countNeighbours(position);
@@ -46,7 +41,7 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			printField();
+			playingField.printFieldStatus();
 		}
 	}
 	public static void doGameRoutine2(){
