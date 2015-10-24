@@ -5,7 +5,8 @@ public class PlayingField {
 
     private static int length, width;
 
-    public PlayingField(){
-
+    public PlayingField(int length, int width){
+        this.length = length;
+        this.width = width;
     }
 }

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
 	static String width, length;
+	private static PlayingField playingField;
 
 	static char[] field;
 	public static void main(String[] args) {
@@ -27,9 +28,7 @@ public class Main {
 		length = scanner.nextLine();
 		System.out.println();
 
-		field[0]='X';field[1]='X';field[2]=' ';
-		field[3]=' ';field[4]='X';field[5]='X';
-		field[6]=' ';field[7]=' ';field[8]=' ';
+		playingField = new PlayingField(Integer.parseInt(width), Integer.parseInt(length));
 	}
 	private static void printField(){
 		System.out.println("["+field[0]+"] "+"["+field[1]+"] "+"["+field[2]+"]");
