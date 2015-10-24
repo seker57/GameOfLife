@@ -8,7 +8,7 @@ public class Main {
 	}
 	private static void setCharToAllFields(char c){
 		for (int i = 0; i < field.length; i++) {
-			System.out.println("Test");
+			
 			field[i]=c;
 		}
 	}
