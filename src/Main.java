@@ -1,5 +1,8 @@
 
 public class Main {
+
+
+
 	static char[] field = new char[9];
 	public static void main(String[] args) {
 		initializeGameField();
@@ -12,6 +15,10 @@ public class Main {
 		}
 	}
 	private static void initializeGameField(){
+
+		System.out.println("------Game of Life Rules------");
+		System.out.println("Wie viele Felder breit soll das Spiel sein: ");
+
 		field[0]='X';field[1]='X';field[2]=' ';
 		field[3]=' ';field[4]='X';field[5]='X';
 		field[6]=' ';field[7]=' ';field[8]=' ';
