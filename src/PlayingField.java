@@ -15,11 +15,13 @@ public class PlayingField {
 
     public void printFieldStatus(){
 
-
-
     }
 
     public char[] getFieldCells(){
         return this.fieldcells;
+    }
+
+    public void setFieldCells(char[] fieldcells){
+        this.fieldcells = fieldcells;
     }
 }
