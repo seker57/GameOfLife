@@ -1,7 +1,11 @@
+package GameUtilities;
+
+import java.io.Serializable;
+
 /**
  * Created by Timo on 24.10.2015.
  */
-public class PlayingField {
+public class PlayingField implements Serializable{
 
     private static int length;
 

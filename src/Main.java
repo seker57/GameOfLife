@@ -1,3 +1,5 @@
+import GameUtilities.PlayingField;
+
 import java.util.Scanner;
 
 public class Main {
