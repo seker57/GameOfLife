@@ -1,9 +1,10 @@
+import java.util.Scanner;
 
 public class Main {
 
+	static String width, length;
 
-
-	static char[] field = new char[9];
+	static char[] field;
 	public static void main(String[] args) {
 		initializeGameField();
 		printField();
@@ -17,8 +18,14 @@ public class Main {
 	}
 	private static void initializeGameField(){
 
+		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("------Game of Life Rules------");
-		System.out.println("Wie viele Felder breit soll das Spiel sein: ");
+		System.out.print("Wie viele Felder breit soll das Spiel sein: ");
+		width = scanner.nextLine();
+		System.out.print("Wie viele Felder lang soll das Spiel sein: ");
+		length = scanner.nextLine();
+		System.out.println();
 
 		field[0]='X';field[1]='X';field[2]=' ';
 		field[3]=' ';field[4]='X';field[5]='X';
